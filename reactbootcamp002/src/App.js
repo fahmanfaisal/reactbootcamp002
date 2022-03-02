@@ -32,10 +32,10 @@ const App = () => {
 
   return (
     <div className='app'>
-      <p>Count: {count}</p>
-      <button onClick={incrementCount}>Increment</button>
-      <button onClick={decrementCount}>Decrement</button>
-      <button onClick={resetCount}>Reset</button>
+      <p className="alert alert-danger" role="alert">Count: {count}</p>
+      <button type="button" className="btn btn-outline-primary mr-1 lh-lg" onClick={incrementCount}>Increment</button>
+      <button type="button" className="btn btn-outline-warning lh-lg" onClick={decrementCount}>Decrement</button>
+      <button type="button" className="btn btn-outline-danger ml-1 lh-lg" onClick={resetCount}>Reset</button>
       <OddOrEven count={count} pickedNum={pickedNum}/>
       {randomCards.map(cardValue => {
         return  <CardNum cardValue={cardValue} pickedValue={pickedValue}/>
